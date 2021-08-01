@@ -1,0 +1,345 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  width: 100%;
+  height:100%;
+}
+
+h2 {
+  background-color: #037C5C;
+  color: gold;
+  padding: 20px;
+  text-align: center;
+  font-size: 20px;
+}
+
+.window {
+  display: block;
+  float: left;
+  background-color: #F1F1A7;
+  border: 5px solid #000000;
+  position: absolute;
+}
+
+#header {
+  background-color: dimgrey;
+  display: block;
+  width: 100%;
+  height: 256px;
+}
+
+#icon-bar {
+  text-align: center;
+  background-color: navajowhite;
+  display: block;
+  width: 100%;
+  height: 100px;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+#open_hangman {
+  background-image: url("images/hangman-icon.png");
+  width: 100px;
+  height: 100px;
+}
+
+#open_bmi {
+  background-image: url("images/bmi-icon.jpg");
+  width: 100px;
+  height: 100px;
+}
+
+#open_memory {
+  background-image: url("images/memory-game-icon.png");
+  width: 100px;
+  height: 100px;
+}
+
+#open_memory {
+  opacity: 0.5;
+}
+
+#close_all {
+  background-image: url("images/close.png");
+  width: 100px;
+  height: 100px;
+}
+
+#open_chat {
+  background-image: url("images/chat-app-icon.png");
+  width: 100px;
+  height: 100px;
+  opacity: 0.5;
+}
+
+#open_hangman:hover, #open_memory:hover, #open_chat:hover, #close_all:hover, #open_bmi:hover {
+  color: whitesmoke;
+  border: gold solid 3px;
+  opacity: 1;
+  cursor: pointer;
+}
+
+#img {
+  display: block;
+  margin: auto;
+  height: 256px;
+  width: 256px;
+}
+
+#canvas {
+  background-color: lightgreen;
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 80%;
+}
+
+.xBtn {
+  float: right;
+  background-color: #F1F1A7;
+  color: black;
+  width: 30px;
+  height: 30px;
+}
+
+.custom_btn {
+  float: right;
+  background-color: #F1F1A7;
+  font-size: 14px;
+  color: black;
+  width: 80px;
+  height: 30px;
+}
+
+.custom_btn:hover {
+  border: gold solid 1px;
+  cursor: pointer;
+}
+
+.xBtn:hover, #restartBtn:hover {
+  color: black;
+  border: gold solid 3px;
+  opacity: 1;
+  cursor: pointer;
+}
+
+.memory_grid {
+  display: inline-grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.flip-card {
+  background: white;
+  width: 75px;
+  height: 75px;
+  border: 1px solid #000000;
+  perspective: 1000px;
+  margin-left: 1.1rem;
+  margin-right: 1.1rem;
+  margin-top: 0.5rem;
+  text-align: center;
+  font-size: 30px;
+  color: black;
+}
+
+.flip-card:hover {
+  cursor: pointer;
+  box-shadow: #F1F1A7;
+}
+
+.chat_div {
+  background-color: white;
+  display: block;
+  width: 395px;
+  height: 380px;
+  border: 3px solid #000000;
+  margin: 1.5rem;
+}
+
+.bmi_div {
+  text-align: center;
+  background-color: aliceblue;
+  display: block;
+  width: 395px;
+  height: 380px;
+  border: 3px solid #000000;
+  margin: 1.5rem;
+}
+
+.reg_div {
+  text-align: center;
+  background-color: white;
+  display: block;
+  width: 395px;
+  height: 250px;
+  border: 3px solid #000000;
+  margin: 1.5rem;
+}
+
+.display_area {
+
+  font-size: 20px;
+  display: block;
+  color: darkblue;
+  height: 80%;
+  float: top;
+
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+}
+
+.input_div {
+  display: flex;
+  align-items: flex-end;
+  height: 20%;
+  float: bottom;
+}
+
+.input_area {
+  display: inline;
+  width: 60%;
+  height: 100%;
+  float: left;
+  font-size: 15px;
+  resize: none;
+}
+
+.img {
+  width: 75px;
+  height: 75px;
+}
+.send_button {
+  align-items: center;
+  border: 1px solid #000000;
+  background: url("/images/submit_btn.png") no-repeat scroll 0 0 transparent;
+  display: inline;
+  width: 15%;
+  height: 50%;
+  margin: 1rem;
+}
+
+.send_button:hover {
+  cursor: pointer;
+  border: darkblue solid 3px;
+}
+
+.name_textfield {
+  text-align: center;
+  height: 10%;
+  width: 40%;
+  resize: none;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+
+}
+
+.game-row_div {
+  text-align: center;
+  display: block;
+  margin-top: 0.75rem;
+}
+
+.game_guess_btn, .game_reset_btn {
+  width: 30%;
+  height: 100%;
+  font-size: medium;
+}
+
+.save-usr_btn {
+  background-color: #F1F1A7;
+  font-size: 18px;
+  color: black;
+  width: 125px;
+  height: 25px;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.go-back_btn {
+  background-color: #F1F1A7;
+  font-size: 18px;
+  color: black;
+  width: 200px;
+  height: 25px;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.change-usr_btn {
+  background-color: #FFFFFF;
+  font-size: 18px;
+  color: black;
+  width: 200px;
+  height: 25px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.guess_textfield {
+  background-color: #FFFFFF;
+  font-size: 14px;
+  color: black;
+  width: 80px;
+  height: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.reg_output {
+  font-size: 20px;
+  color: darkred;
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+}
+
+.save-usr_btn:hover, .change-usr_btn:hover, .go-back_btn:hover {
+  border: gold solid 3px;
+  cursor: pointer;
+}
+
+.footer_div {
+  height: 20%;
+  text-align: right;
+  margin-top: 10px;
+  height: 20%;
+  float: bottom;
+}
+
+.bmi_textfield {
+  background-color: #FFFFFF;
+  font-size: 20px;
+  color: black;
+  width: 300px;
+  height: 25px;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.bmi-calculate_btn {
+  background-color: #F1F1A7;
+  font-size: 25px;
+  color: black;
+  width: 150px;
+  height: 30px;
+  margin-top: 1rem;
+  margin-bottom: 3rem;
+}
+
+.bmi-calculate_btn:hover {
+  border: gold solid 3px;
+  cursor: pointer;
+}
+
+.bmi_output {
+  background-color: #FFFFFF;
+  font-size: 20px;
+  color: black;
+  width: 300px;
+  height: 30px;
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+}
